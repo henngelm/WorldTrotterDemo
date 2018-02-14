@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Conversion View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WorldTrotterDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ConversionViewController" customModule="WorldTrotterDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -45,9 +45,13 @@
                                 <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="fahrenheitFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="CeC-Iw-4gJ"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="zsu-tK-mAi" firstAttribute="centerX" secondItem="V2L-ub-aaW" secondAttribute="centerX" id="3kF-P5-oXZ"/>
                             <constraint firstItem="uUZ-z9-Z4E" firstAttribute="centerX" secondItem="V2L-ub-aaW" secondAttribute="centerX" id="AS0-Mp-Inz"/>
@@ -60,9 +64,21 @@
                             <constraint firstItem="Wnm-CH-SXe" firstAttribute="top" secondItem="V2L-ub-aaW" secondAttribute="bottom" constant="8" id="oO1-TA-z59"/>
                             <constraint firstItem="RTW-Zy-lls" firstAttribute="top" secondItem="Wnm-CH-SXe" secondAttribute="bottom" constant="8" id="ydp-SQ-Y6c"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="z0D-kp-mg5" appends="YES" id="G4x-vK-OAa"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="RTW-Zy-lls" id="n4B-MJ-9zI"/>
+                        <outlet property="textField" destination="zsu-tK-mAi" id="1w2-t2-F1a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="z0D-kp-mg5">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="EId-6z-Ezp"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
