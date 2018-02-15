@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConversionViewController: UIViewController {
+class ConversionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var celsiusLabel: UILabel!
     @IBOutlet var textField: UITextField!
 //    implementing the Temperature Conversion
@@ -42,7 +42,7 @@ class ConversionViewController: UIViewController {
             fahrenheitValue = nil
         }
     }
-    // testing with git add command ...
+    
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         textField.resignFirstResponder()
     }
@@ -58,5 +58,26 @@ class ConversionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateCelsiusLabel()
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        preventing multiple decimal separators
+        let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
+        let replacementTextHasDecimalSeparator = string.range(of: ".")
+
+//       Bronze challenge Disallow Alphabetic Characters
+        let alphabeticCharacters = NSCharacterSet.letters
+        let existingTextHasAlphabeticCharacters = textField.text?.rangeOfCharacter(from: alphabeticCharacters)
+        let replacementTextHasAlphabeticCharacters = string.rangeOfCharacter(from: alphabeticCharacters)
+        
+        if existingTextHasDecimalSeparator != nil,
+            replacementTextHasDecimalSeparator != nil { //        preventing multiple decimal separators
+            return false
+        } else if existingTextHasAlphabeticCharacters != nil ||
+                    replacementTextHasAlphabeticCharacters != nil { //       Bronze challenge Disallow Alphabetic Characters
+                return false
+        } else {
+            return true
+        }
     }
 }
