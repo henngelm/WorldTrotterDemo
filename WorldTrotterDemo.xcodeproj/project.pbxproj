@@ -14,6 +14,7 @@
 		F196F7A8203325350055A90F /* WorldTrotterDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F196F7A7203325350055A90F /* WorldTrotterDemoTests.swift */; };
 		F196F7B3203325350055A90F /* WorldTrotterDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F196F7B2203325350055A90F /* WorldTrotterDemoUITests.swift */; };
 		F1C4C4032034C981003657E6 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C4C4022034C981003657E6 /* ConversionViewController.swift */; };
+		F1C4C40620360973003657E6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C4C40520360973003657E6 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		F196F7B2203325350055A90F /* WorldTrotterDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterDemoUITests.swift; sourceTree = "<group>"; };
 		F196F7B4203325350055A90F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1C4C4022034C981003657E6 /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConversionViewController.swift; path = ../ConversionViewController.swift; sourceTree = "<group>"; };
+		F1C4C40520360973003657E6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C4C40620360973003657E6 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				F196F7A6203325350055A90F /* WorldTrotterDemoTests */,
 				F196F7B1203325350055A90F /* WorldTrotterDemoUITests */,
 				F196F790203325350055A90F /* Products */,
+				F1C4C40420360973003657E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 				F196F7B4203325350055A90F /* Info.plist */,
 			);
 			path = WorldTrotterDemoUITests;
+			sourceTree = "<group>";
+		};
+		F1C4C40420360973003657E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1C4C40520360973003657E6 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
