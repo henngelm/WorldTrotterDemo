@@ -85,7 +85,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     }
 
 //    Silver Challenge: Dark Mode
-    override func viewWillAppear(_ animated: Bool) {
+//    override func viewWillAppear(_ animated: Bool) {
 //        let hour = Calendar.current.component(.hour, from: Date())
 //        if hour > 6, hour < 19 {
 //            view.backgroundColor = UIColor.gray
@@ -94,13 +94,12 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
 //        }
 
 //        returns a random color
-        func randomColor() -> UIColor {
-            let red = CGFloat(drand48())
-            let green = CGFloat(drand48())
-            let blue = CGFloat(drand48())
-            return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
-        }
-        view.backgroundColor = randomColor()    
-    }
-    
+//        func randomColor() -> UIColor {
+//            let red = CGFloat(drand48())
+//            let green = CGFloat(drand48())
+//            let blue = CGFloat(drand48())
+//            return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+//        }
+//        view.backgroundColor = randomColor()
+//    }
 }
