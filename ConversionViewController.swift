@@ -57,6 +57,9 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("ConversionViewController loaded its view.")
+        
         updateCelsiusLabel()
     }
     
@@ -80,4 +83,24 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
             return true
         }
     }
+
+//    Silver Challenge: Dark Mode
+    override func viewWillAppear(_ animated: Bool) {
+//        let hour = Calendar.current.component(.hour, from: Date())
+//        if hour > 6, hour < 19 {
+//            view.backgroundColor = UIColor.gray
+//        } else {
+//            view.backgroundColor = UIColor.darkGray
+//        }
+
+//        returns a random color
+        func randomColor() -> UIColor {
+            let red = CGFloat(drand48())
+            let green = CGFloat(drand48())
+            let blue = CGFloat(drand48())
+            return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+        }
+        view.backgroundColor = randomColor()    
+    }
+    
 }
