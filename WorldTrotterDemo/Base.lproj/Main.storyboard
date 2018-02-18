@@ -87,12 +87,22 @@
         <!--Map-->
         <scene sceneID="cTB-9a-u2B">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nGI-Lg-DC2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="brA-eG-w76" customClass="MapViewController" customModule="WorldTrotterDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="MapIcon" id="lF4-OZ-hgG"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nGI-Lg-DC2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1872.8" y="138.98050974512745"/>
+            <point key="canvasLocation" x="913" y="139"/>
+        </scene>
+        <!--BNR-->
+        <scene sceneID="KFM-8x-h39">
+            <objects>
+                <viewController id="EMm-CG-eaY" customClass="WebViewController" customModule="WorldTrotterDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="BNR" image="MapIcon" id="lfH-ej-TsG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rEP-Uf-o7K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1665" y="139"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="KAV-A9-Chc">
@@ -107,11 +117,12 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="gea-Vx-qL0"/>
                         <segue destination="brA-eG-w76" kind="relationship" relationship="viewControllers" id="PAJ-CV-M2u"/>
+                        <segue destination="EMm-CG-eaY" kind="relationship" relationship="viewControllers" id="3rh-Bw-yNS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lsw-Ur-dq4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="933.60000000000002" y="138.98050974512745"/>
+            <point key="canvasLocation" x="913" y="-625"/>
         </scene>
     </scenes>
     <resources>

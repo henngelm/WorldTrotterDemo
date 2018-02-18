@@ -10,44 +10,22 @@ import UIKit
 import MapKit
 
 class MapViewController: UIViewController {
-    
     var mapView: MKMapView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print("MapViewController loaded its view.")
-    }
     
     override func loadView() {
         super.loadView()
+        
 //        create a map view
         mapView = MKMapView()
-
+        
 //        set it as *the* view of this view controller
         view = mapView
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-//        segmented control
-        let segmentedControl = UISegmentedControl(items: ["Standard", "Hybrid", "Satellite"])
-        segmentedControl.backgroundColor = UIColor.white.withAlphaComponent(0.5)
-        segmentedControl.selectedSegmentIndex = 0
-        
-        // add target-action pair to the segmented control and associate it with the .valueChanged event.
-        segmentedControl.addTarget(self, action: #selector(MapViewController.mapTypeChanged(_:)), for: .valueChanged)
-        
-        segmentedControl.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(segmentedControl)
-        
-//        creating constraints programmatically
-        let topConstraint = segmentedControl.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 8)
-        // use layaoutMargins
-        let margins = view.layoutMarginsGuide
-        let leadingConstraint = segmentedControl.leadingAnchor.constraint(equalTo: margins.leadingAnchor)
-        let trailingConstraint = segmentedControl.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
-        
-//        activating the constrains
-        topConstraint.isActive = true
-        leadingConstraint.isActive = true
-        trailingConstraint.isActive = true
+        print("MapViewController loaded its view")
     }
     
 //        implement the action method in MapViewController that the event will trigger.
