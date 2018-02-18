@@ -18,6 +18,24 @@ class MapViewController: UIViewController {
         mapView = MKMapView()
 //       Set it as *the* view of this view controller
         view = mapView
+        
+//        add (programmatically) segmented control to the interface
+        let segmentedControl = UISegmentedControl(items: ["Standard", "Hybrid", "Satellite"])
+        segmentedControl.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        segmentedControl.selectedSegmentIndex = 0
+        
+        segmentedControl.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(segmentedControl)
+        
+//        contraints
+        let topConstraint = segmentedControl.topAnchor.constraint(equalTo: view.topAnchor)
+        let leadingConstraint = segmentedControl.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+        let trailingConstraint = segmentedControl.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        
+//        activare the constraints
+        topConstraint.isActive = true
+        leadingConstraint.isActive = true
+        trailingConstraint.isActive = true
     }
     
     override func viewDidLoad() {
