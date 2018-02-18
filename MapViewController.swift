@@ -14,11 +14,9 @@ class MapViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        
-//        create a map view
+//       Create a map view
         mapView = MKMapView()
-        
-//        set it as *the* view of this view controller
+//       Set it as *the* view of this view controller
         view = mapView
     }
     
@@ -26,19 +24,5 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         
         print("MapViewController loaded its view")
-    }
-    
-//        implement the action method in MapViewController that the event will trigger.
-    func mapTypeChanged(_ segControl: UISegmentedControl) {
-        switch segControl.selectedSegmentIndex {
-        case 0:
-            mapView.mapType = .standard
-        case 1:
-            mapView.mapType = .hybrid
-        case 2:
-            mapView.mapType = .satellite
-        default:
-            break
-        }
     }
 }
